@@ -19,7 +19,7 @@ $>cd libft
 $>git clone https://github.com/NotJustJoe/libfttester
 $>cd libfttester
 
-INSIDE THE FOLDER HERE ARE THE AVAILABLE MAKE COMMANDS:
+INSIDE THE FOLDER ARE THE AVAILABLE MAKE COMMANDS:
 
 1 - Run a test for a specific function
 
