@@ -1,7 +1,7 @@
 # libfttester
 A Tester for the Libft 42 project
 
-This Tester was made by trofidal, here are some usefull info to have before using it:
+This Tester was made by trofidal, inspired by Tripouille, here are some usefull info to have before using it:
 
 I think that handling NULL parameter is a good point in starting the 42 Cursus, therefor EACH of my test (if possible) will try to pass NULL as parameter.
 There will of course, be some tests based off some other tester i found around, i just made my own to add what i though was missing off the one i've seen.
@@ -37,3 +37,5 @@ $>make all
 
 -----
 For any questions, contact me on 42 slack 'trofidal' or by discord, NotJustJoe#3756
+-----
+This Tester has been made after i was using https://github.com/tripouille/libftTester way too often and wanted to have my own, go take a look !
