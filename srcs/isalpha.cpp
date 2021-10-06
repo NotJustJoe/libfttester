@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:46:18 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/06 19:12:44 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:36:06 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,14 @@ int main(void){
     Infos   trofidal("isalpha", 18);
     signal(SIGSEGV, segfault_handler);
     
-    /*1*/trofidal.testerInt(ft_isalpha(116), isalpha(116), "tested", "116");
+    /*1*/try {
+        ft_isalpha(116);
+        std::cerr << "ok" << std::endl;
+        //trofidal.testerInt(ft_isalpha(116), isalpha(116), "tested", "116");
+    }
+    catch (std::exception & e){
+        std::cout << "coucou" << std::endl;
+    }
     /*2*/trofidal.testerInt(ft_isalpha(72), isalpha(72), "tested", "72");
     /*3*/trofidal.testerInt(ft_isalpha(111), isalpha(111), "tested", "111");
     /*4*/trofidal.testerInt(ft_isalpha(77), isalpha(77), "tested", "77");
