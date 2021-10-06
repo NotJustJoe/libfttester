@@ -6,34 +6,42 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:46:18 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/06 17:46:51 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:12:44 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+extern "C" {
+#define new bar
+#include "../../libft.h"
+#undef new
+};
 
 #include "../includes/main_header.hpp"
 
 int main(void){
-    Infos   trofidal("isalpha", 19);
+    Infos   trofidal("isalpha", 18);
     signal(SIGSEGV, segfault_handler);
     
-    /*1*/trofidal.testerChar(ft_isalpha('t'), isalpha('t'), "tested");
-    /*2*/trofidal.testerChar(ft_isalpha('H'), isalpha('H'), "tested");
-    /*3*/trofidal.testerChar(ft_isalpha('o'), isalpha('o'), "tested");
-    /*4*/trofidal.testerChar(ft_isalpha('M'), isalpha('M'), "tested");
-    /*5*/trofidal.testerChar(ft_isalpha('a'), isalpha('a'), "tested");
-    /*6*/trofidal.testerChar(ft_isalpha('S'), isalpha('S'), "tested");
-    /*7*/trofidal.testerChar(ft_isalpha('4'), isalpha('4'), "tested");
-    /*8*/trofidal.testerChar(ft_isalpha('2'), isalpha('2'), "tested");
-    /*9*/trofidal.testerChar(ft_isalpha('2'), isalpha('2'), "tested");
-    /*10*/trofidal.testerChar(ft_isalpha(13), isalpha(13), "tested");
-    /*11*/trofidal.testerChar(ft_isalpha(3), isalpha(3), "tested");
-    /*12*/trofidal.testerChar(ft_isalpha(32), isalpha(32), "tested");
-    /*13*/trofidal.testerChar(ft_isalpha(127), isalpha(127), "tested");
-    /*14*/trofidal.testerChar(ft_isalpha(0), isalpha(0), "tested");
+    /*1*/trofidal.testerInt(ft_isalpha(116), isalpha(116), "tested", "116");
+    /*2*/trofidal.testerInt(ft_isalpha(72), isalpha(72), "tested", "72");
+    /*3*/trofidal.testerInt(ft_isalpha(111), isalpha(111), "tested", "111");
+    /*4*/trofidal.testerInt(ft_isalpha(77), isalpha(77), "tested", "77");
+    /*5*/trofidal.testerInt(ft_isalpha(97), isalpha(97), "tested", "97");
+    /*6*/trofidal.testerInt(ft_isalpha(83), isalpha(83), "tested", "83");
+    /*7*/trofidal.testerInt(ft_isalpha(52), isalpha(52), "tested", "52");
+    /*8*/trofidal.testerInt(ft_isalpha(50), isalpha(50), "tested", "50");
+    /*9*/trofidal.testerInt(ft_isalpha(48), isalpha(48), "tested", "48");
+    /*10*/trofidal.testerInt(ft_isalpha(13), isalpha(13), "tested", "13");
+    /*11*/trofidal.testerInt(ft_isalpha(3), isalpha(3), "tested", "3");
+    /*12*/trofidal.testerInt(ft_isalpha(32), isalpha(32), "tested", "32");
+    /*13*/trofidal.testerInt(ft_isalpha(127), isalpha(127), "tested", "127");
+    /*14*/trofidal.testerInt(ft_isalpha(0), isalpha(0), "tested", "0");
     /* Harder tests */
-    /*15*/trofidal.testerChar(ft_isalpha(UCHAR_MAX), isalpha(UCHAR_MAX), "not tested by moulinette");
-    /*16*/trofidal.testerChar(ft_isalpha(2147483648), isalpha(2147483647), "not tested by moulinette");
-    /*17*/trofidal.testerChar(ft_isalpha(-2147483648), isalpha(-2147483648), "not tested by moulinette");
-    /*18*/trofidal.testerChar(ft_isalpha(NULL), isalpha(NULL), "nullable");
-    /*19*/trofidal.testerChar(ft_isalpha(NULL), isalpha(NULL), "nullable");
+    /*15*/trofidal.testerInt(ft_isalpha(UCHAR_MAX), isalpha(UCHAR_MAX), "not tested by moulinette", "255");
+    /*16*/trofidal.testerInt(ft_isalpha(2147483647), isalpha(2147483647), "not tested by moulinette", "2147483647");
+    /*17*/trofidal.testerInt(ft_isalpha(-2147483648), isalpha(-2147483648), "not tested by moulinette", "-2147483648");
+
+    /*
+make bonus -C ../ && cp ../libft.a ./ && clang++ srcs/isalpha.cpp common/infos.cpp common/sig_handler.cpp libft.a && ./a.out
+    */
 }

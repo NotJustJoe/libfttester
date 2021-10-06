@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:52:03 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/06 17:06:29 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/06 18:36:53 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@
 # include <string.h>
 # include <ctype.h> 
 # include "variables.hpp"
-# include "../../libft.h"
 
 /*
 *   SIGNAL HANDLING
