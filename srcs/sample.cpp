@@ -6,14 +6,14 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:53:25 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/05 14:13:06 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:47:57 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/main_header.hpp"
 
 int main(void){
-
+    Infos   trofidal("sample", 0);
     signal(SIGSEGV, segfault_handler);
     //1
     //2
