@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 11:16:22 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/07 15:35:16 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Infos::~Infos( void ){
         std::cout << 
         "Results for " << 
         this->_function << 
+        " " << 
         this->_goodAnswers << 
         "/" << 
         this->_totalTests << 
@@ -69,7 +70,7 @@ void    Infos::putsTestName( void ){
 }
 
 void    Infos::putsEndTest( void ){
-    if (this->_goodAnswers + 1 == this->_totalTests){
+    if (this->_goodAnswers == this->_totalTests){
         Infos::putsSpacer();
         std::cout << 
         "ft_" << 
@@ -99,7 +100,7 @@ void    Infos::tInt( int returned, int expected ){
     else{
         Infos::putsIncorrect();
     }
-    if (this->_totalTests == this->_actualTest + 1)
+    if (this->_totalTests == this->_actualTest)
         Infos::putsEndTest();
 }
 

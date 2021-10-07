@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 10:50:31 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 11:08:05 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/07 13:47:44 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int         test_number;
 
 int main(void){
     std::string fN = "isascii"; //Function Name
-    Infos   trofidal(fN, 18);
+    Infos   trofidal(fN, 17);
     signal(SIGSEGV, segfault_handler);
     int v[] = {116, 72, 111, 77, 97, 83, 52, 50, 48, 13, 3, 32, 127, 0, UCHAR_MAX, 2147483647, -2147483648}; // Values
     
