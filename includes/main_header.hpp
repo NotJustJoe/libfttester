@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:52:03 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/06 18:36:53 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/07 08:54:46 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <ctype.h> 
+# include <stdio.h>
+# include <stdlib.h>
 # include "variables.hpp"
 
 /*
