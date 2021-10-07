@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   variables.hpp                                      :+:      :+:    :+:   */
+/*   infos_class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 09:19:53 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/07 11:17:08 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VARIABLES_HPP
-# define VARIABLES_HPP
+#ifndef INFOS_CLASS_HPP
+# define INFOS_CLASS_HPP
 
 #include "main_header.hpp"
 

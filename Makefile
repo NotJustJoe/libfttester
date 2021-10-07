@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/07 11:09:41 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/07 11:30:49 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ FOR_ALL		= $(addprefix common/, infos.cpp sig_handler.cpp)
 
 #####################	M A N D A T O R Y	T E S T S	#####################
 BASIC_TEST	=	isalpha isdigit isalnum isascii isprint \
-				#strlen memset bzero memcpy memmove strlcpy \
+				strlen #memset bzero memcpy memmove strlcpy \
 				strlcat toupper tolower strchr strrchr strncmp \
 				memchr memcmp strnstr atoi calloc strdup \
 				substr strjoin strtrim split itoa strmapi \
@@ -32,7 +32,7 @@ BONUS_TEST	=	lstnew lstadd_front lstsize \
 				lstclear lstiter lstmap
 
 $(BASIC_TEST): %: base_start
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -f a.out
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 $(BONUS):
 	@echo pas fait

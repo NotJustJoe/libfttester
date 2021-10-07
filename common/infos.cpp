@@ -6,11 +6,11 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 09:24:02 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/07 11:16:22 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/variables.hpp"
+#include "../includes/infos_class.hpp"
 
 extern  std::string testing;
 extern  int test_number;
