@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.cpp                                        :+:      :+:    :+:   */
+/*   isascii.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 13:46:18 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 11:08:08 by trofidal         ###   ########.fr       */
+/*   Created: 2021/10/07 10:50:31 by trofidal          #+#    #+#             */
+/*   Updated: 2021/10/07 11:08:05 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 extern "C" {
 #define new bar
@@ -22,13 +23,13 @@ std::string testing;
 int         test_number;
 
 int main(void){
-    std::string fN = "isalpha"; //Function Name
+    std::string fN = "isascii"; //Function Name
     Infos   trofidal(fN, 18);
     signal(SIGSEGV, segfault_handler);
     int v[] = {116, 72, 111, 77, 97, 83, 52, 50, 48, 13, 3, 32, 127, 0, UCHAR_MAX, 2147483647, -2147483648}; // Values
     
-    #define a ft_isalpha
-    #define b isalpha
+    #define a ft_isascii
+    #define b isascii
     #define s std::to_string
     #define t setTesting
     

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.cpp                                        :+:      :+:    :+:   */
+/*   isdigit.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 13:46:18 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 11:08:08 by trofidal         ###   ########.fr       */
+/*   Created: 2021/10/07 10:32:09 by trofidal          #+#    #+#             */
+/*   Updated: 2021/10/07 11:08:02 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ std::string testing;
 int         test_number;
 
 int main(void){
-    std::string fN = "isalpha"; //Function Name
+    std::string fN = "isdigit"; //Function Name
     Infos   trofidal(fN, 18);
     signal(SIGSEGV, segfault_handler);
     int v[] = {116, 72, 111, 77, 97, 83, 52, 50, 48, 13, 3, 32, 127, 0, UCHAR_MAX, 2147483647, -2147483648}; // Values
     
-    #define a ft_isalpha
-    #define b isalpha
+    #define a ft_isdigit
+    #define b isdigit
     #define s std::to_string
     #define t setTesting
     
