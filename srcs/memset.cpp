@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:55:23 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 14:13:45 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:32:47 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,26 +35,26 @@ int main(void){
 
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 'A', 42);b(tab, 'A', 42);
-    /*1*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[42]");trofidal.tInt(tab[42], toto[42]);
+    /*1*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[42]");trofidal.tInt(tab[42], toto[42]); 
     /*****************/
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 'A', 42);b(tab, 'A', 42);
-    /*2*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[41]");trofidal.tInt(tab[41], toto[41]);
+    /*2*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[41]");trofidal.tInt(tab[41], toto[41]); 
     /*****************/
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 0, 42);b(tab, 0, 42);
-    /*3*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[43]");trofidal.tInt(tab[43], toto[43]);
+    /*3*/trofidal.t(fN, "(tab, 'A', 42) [checking tab[43]");trofidal.tInt(tab[43], toto[43]); 
     /*****************/
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 'A', 1);b(tab, 'A', 1);
-    /*4*/trofidal.t(fN, "(tab, 'A', 1) [checking tab[0]");trofidal.tInt(tab[0], toto[0]);
+    /*4*/trofidal.t(fN, "(tab, 'A', 1) [checking tab[0]");trofidal.tInt(tab[0], toto[0]); 
     /*****************/
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 'A', 99);b(tab, 'A', 99);
-    /*5*/trofidal.t(fN, "(tab, 0, 99) [checking tab[99]");trofidal.tInt(tab[99], toto[99]);
+    /*5*/trofidal.t(fN, "(tab, 0, 99) [checking tab[99]");trofidal.tInt(tab[99], toto[99]); 
     /*****************/
     memset(tab, '0', 100); memset(toto, '0', 100);
     a(toto, 0, 32);b(tab, 0, 32);
-    /*6*/trofidal.t(fN, "(tab, 0, 32) [checking tab[32]");trofidal.tInt(tab[32], toto[32]);
+    /*6*/trofidal.t(fN, "(tab, 0, 32) [checking tab[32]");trofidal.tInt(tab[32], toto[32]); 
     /*****************/
 }

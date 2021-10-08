@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/07 19:18:42 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/08 16:08:55 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@ CFLAGS		= -g3 -ldl -std=c++11 -I utils/ -I$(PATH_LIBFT)
 PATH_LIBFT	= ../
 VALGRIND	= valgrind --leak-check=full -s
 TESTER_PATH	= srcs/
-FOR_ALL		= $(addprefix common/, infos.cpp sig_handler.cpp)
+FOR_ALL		= $(addprefix common/, infos.cpp sig_handler.cpp tripouille_leaks.cpp)
 
 #####################	M A N D A T O R Y	T E S T S	#####################
 BASIC_TEST	=	isalpha isdigit isalnum isascii isprint \
 				strlen memset bzero memcpy memmove strlcpy \
 				strlcat toupper tolower strchr strrchr strncmp \
-				#memchr memcmp strnstr atoi calloc strdup \
+				memchr memcmp #strnstr atoi calloc strdup \
 				substr strjoin strtrim split itoa strmapi \
 				striteri putchar_fd putstr_fd putendl_fd \
 				putnbr_fd

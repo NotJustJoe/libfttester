@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 10:50:31 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 13:47:44 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:33:02 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,21 @@ int main(void){
     #define s std::to_string
     #define t setTesting
     
-    /*1*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*2*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*3*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*4*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*5*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*6*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*7*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*8*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*9*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*10*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*11*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*12*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*13*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*14*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*15*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*16*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
-    /*17*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
+    /*1*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*2*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*3*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*4*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*5*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*6*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*7*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*8*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*9*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*10*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*11*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*12*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*13*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*14*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*15*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*16*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*17*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
 }

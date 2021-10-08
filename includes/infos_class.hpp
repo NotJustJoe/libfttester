@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/07 11:17:08 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:22:56 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,19 @@ class   Infos{
         void    putsTestName( void );
         void    putsSigsegv( void );
         void    putsCorrect( void );
+        void    putsIncorrectLeaks( void );
+        void    putsCorrectLeaks( void );
         void    putsIncorrect( void );
         void    putsEndTest( void );
         void    setTesting ( std::string functionName, std::string input );
         void    putsSpacer ( void );
+        void    showLeaks( int returned, int expected );
         int     gTN ( void );
     private:
         std::string _function;
         std::string _input;
         std::string _spacer;
+        bool        _isLeaking;
         int         _totalTests;
         int         _goodAnswers;
         int         _actualTest;

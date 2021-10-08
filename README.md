@@ -8,9 +8,9 @@ There will of course, be some tests based off some other tester i found around, 
 
 Test feedbacks :
 
+YELLOW = SEGFAULT
 RED = OUTPUT KO
-YELLOW = LEAKS
-PURPLE = OUTPUT OK, NULL PARAMETER UNHANDLED
+BLUE = LEAKS KO
 GREEN = OUTPUT OK, NO LEAKS
 
 To use it :
