@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:31:04 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 14:32:51 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/09 13:04:07 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,13 @@ int main(void){
     std::string fN = "strlen"; //Function Name
     Infos   trofidal(fN, 6);
     signal(SIGSEGV, segfault_handler);
-	char *toto = NULL;
 
     #define a ft_strlen
     #define b strlen
     #define s std::to_string
     #define t setTesting
 
-    /*1*/trofidal.t(fN, "NULL");trofidal.tInt(a(toto), 0); 
+    /*1*/trofidal.t(fN, "NULL");trofidal.tInt(a(NULL), 0); 
     /*2*/trofidal.t(fN, "trofidal!");trofidal.tInt(a("trofidal!"), b("trofidal!")); 
     /*3*/trofidal.t(fN, """");trofidal.tInt(a(""), b("")); 
     /*4*/trofidal.t(fN, "abcde0\rfghijkl0mno\tpqrst0uvwxyz");trofidal.tInt(a("abcde0\rfghijkl0mno\tpqrst0uvwxyz"), b("abcde0\rfghijkl0mno\tpqrst0uvwxyz")); 

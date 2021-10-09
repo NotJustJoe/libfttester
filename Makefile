@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/08 16:08:55 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/09 13:33:55 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ FOR_ALL		= $(addprefix common/, infos.cpp sig_handler.cpp tripouille_leaks.cpp)
 BASIC_TEST	=	isalpha isdigit isalnum isascii isprint \
 				strlen memset bzero memcpy memmove strlcpy \
 				strlcat toupper tolower strchr strrchr strncmp \
-				memchr memcmp #strnstr atoi calloc strdup \
+				memchr memcmp strnstr atoi #calloc strdup \
 				substr strjoin strtrim split itoa strmapi \
 				striteri putchar_fd putstr_fd putendl_fd \
 				putnbr_fd

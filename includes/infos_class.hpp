@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 14:22:56 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/09 12:42:49 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class   Infos{
         ~Infos( void );
 
         void    tInt( int returned, int expected );
-        void    testerChar( char returned, char expected, std::string type, std::string input );
-        void    testerCharPtr( char *returned, char *expected, std::string type, std::string input );
-        void    testerVoidPtr( void *returned, void *expected, std::string type, std::string input );
-        void    testerCharPtrPtr( char **returned, char **expected, std::string type, std::string input );
-        void    testerVoid( std::string type, std::string input );
+        void    tChar( char returned, char expected, std::string type, std::string input );
+        void    tCharPtr( char *returned, char *expected );
+        void    tVoidPtr( void *returned, void *expected, std::string type, std::string input );
+        void    tCharPtrPtr( char **returned, char **expected, std::string type, std::string input );
+        void    tVoid( std::string type, std::string input );
         void    putsTestName( void );
         void    putsSigsegv( void );
         void    putsCorrect( void );
@@ -36,6 +36,7 @@ class   Infos{
         void    setTesting ( std::string functionName, std::string input );
         void    putsSpacer ( void );
         void    showLeaks( int returned, int expected );
+        void    showLeaksCharPtr( char * returned, char * expected );
         int     gTN ( void );
     private:
         std::string _function;
