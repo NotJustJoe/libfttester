@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/09 12:43:32 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/10 02:55:04 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,12 @@ void    Infos::tInt( int returned, int expected ){
     Infos::showLeaks( returned, expected );
 }
 
+void    Infos::tIntPtr( int returned, int expected ){
+    this->_actualTest++;
+    this->_input = testing;
+    this->_isLeaking = false;
+}
+
 void    Infos::tCharPtr( char * returned, char * expected ){
     this->_actualTest++;
     this->_input = testing;
@@ -169,6 +175,22 @@ int     Infos::gTN( void ){
 void    Infos::putsSpacer( void ){
     std::cout << std::endl << this->_spacer << std::endl;
 }
+
+void    Infos::tripouilleCheck(void * p, size_t required_size)
+{
+	void * p2 = malloc(required_size); 
+	#ifdef __unix__
+	if (malloc_usable_size(p) == malloc_usable_size(p2))
+	#endif
+	#ifdef __APPLE__
+	if (malloc_size(p) == malloc_size(p2))
+	#endif
+		{std::ostringstream ss; ss << this->_actualTest << "[\033[1;32mAllocated Space OK\033[0m]"; write(1, ss.str().c_str(), ss.str().size());write(1, "\n", 1);}
+	else
+		{std::ostringstream ss; ss << this->_actualTest << "[\033[1;31mAllocated Space KO\033[0m]"; write(1, ss.str().c_str(), ss.str().size());write(1, "\n", 1);}
+	free(p2);
+}
+
 /*
 void    testerInt( int returned, int expected, std::string type );
 void    testerChar( char returned, char expected, std::string type );

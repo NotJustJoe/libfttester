@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:49:31 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 14:01:22 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/10 02:40:47 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,4 @@ void mallocListRemove(void * p)
     if (it != mallocList.end())
         mallocList.erase(it);
 }
+

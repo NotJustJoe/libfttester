@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/09 12:42:49 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/10 02:41:26 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class   Infos{
         void    tInt( int returned, int expected );
         void    tChar( char returned, char expected, std::string type, std::string input );
         void    tCharPtr( char *returned, char *expected );
-        void    tVoidPtr( void *returned, void *expected, std::string type, std::string input );
+        void    tIntPtr( int returned, int expected );
         void    tCharPtrPtr( char **returned, char **expected, std::string type, std::string input );
         void    tVoid( std::string type, std::string input );
         void    putsTestName( void );
@@ -37,6 +37,7 @@ class   Infos{
         void    putsSpacer ( void );
         void    showLeaks( int returned, int expected );
         void    showLeaksCharPtr( char * returned, char * expected );
+        void    tripouilleCheck(void * p, size_t required_size);
         int     gTN ( void );
     private:
         std::string _function;
