@@ -1,7 +1,7 @@
 # libfttester
 A Tester for the Libft 42 project
 
-This Tester was made by trofidal, using Tripouille Leaks checker (https://github.com/Tripouille/libftTester) Thanks to him !
+This Tester was made by trofidal, using Tripouille Leaks checker and kind of inspired off his work (https://github.com/Tripouille/libftTester) Thanks to him !
 Here are some usefull info to have before using it:
 
 I think that handling NULL parameter is a good point in starting the 42 Cursus, therefor EACH of my test (if possible) will try to pass NULL as parameter.
