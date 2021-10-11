@@ -27,21 +27,20 @@ $>cd libfttester
 
 INSIDE THE FOLDER ARE THE AVAILABLE MAKE COMMANDS:
 
-1 - Run a test for a specific function
-
+1 - Run a test for a specific function<br />
 $>make atoi
-will make ft_atoi function tests.
 
-2 - Run basics tests, only the mandatory part
+2 - Run basics tests, only the mandatory part<br />
 $>make base
 
-3 - Run bonus only.
+
+3 - Run bonus only.<br />
 $>make bonus
 
-4 - Run every tests, mandatory and bonus.
-$>make all
+4 - Run every tests, mandatory and bonus.<br />
+$>make all (not done yet)
 
-5 - Run tests for Functions that accepts NULL parameters
+5 - Run tests for Functions that accepts NULL parameters<br />
 $>make null
 
 -----
