@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 16:05:55 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 18:09:04 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,6 +183,25 @@ void    Infos::tInt( int returned, int expected ){
     this->_input = testing;
     this->_isLeaking = false;
     Infos::showLeaksInt( returned, expected );
+}
+
+void    Infos::showLeaksLst( int returned, int expected ){
+    if (returned == 1 && expected == 1){
+        this->_goodAnswers++;
+        Infos::putsCorrect();
+    }
+    else if (((returned != 1 && expected != 1) || (returned != 1 || expected != 1)) && this->_isLeaking == false){
+        Infos::putsIncorrect();
+    }
+    if (this->_totalTests == this->_actualTest)
+        Infos::putsEndTest();
+}
+
+void    Infos::tIntLst( int returned, int expected ){
+    this->_actualTest++;
+    this->_input = testing;
+    this->_isLeaking = false;
+    Infos::showLeaksLst( returned, expected );
 }
 
 void    Infos::tIntPtr( int returned, int expected ){

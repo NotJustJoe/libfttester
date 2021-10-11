@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/11 15:12:47 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/11 18:54:17 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC			= clang++
 CFLAGS		= -g3 -ldl -std=c++11 -I utils/ -I$(PATH_LIBFT) 
 PATH_LIBFT	= ../
 VALGRIND	= valgrind --leak-check=full -s
-TESTER_PATH	= srcs/
+TESTER_PATH	= srcs/bonus/
 FOR_ALL		= $(addprefix common/, infos.cpp sig_handler.cpp tripouille_leaks.cpp free_tabs.cpp)
 
 #####################	M A N D A T O R Y	T E S T S	#####################
@@ -30,7 +30,7 @@ BASIC_TEST	=	isalpha isdigit isalnum isascii isprint \
 				putnbr_fd
 ##################### 		B O N U S	T E S T S		#####################
 BONUS_TEST	=	lstnew lstadd_front lstsize \
-				lstlast lstadd_back lstdelone \
+				lstlast lstadd_back #lstdelone \
 				lstclear lstiter lstmap
 
 NULL_TEST = z_NULL.cpp
@@ -38,8 +38,8 @@ NULL_TEST = z_NULL.cpp
 $(BASIC_TEST): %: base_start
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
-$(BONUS):
-	@echo pas fait
+$(BONUS_TEST): %: bonus_base
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_start:
 	@echo Making Libft
@@ -55,7 +55,12 @@ base_test:
 
 base: $(BASIC_TEST)
 
-bonus: $(BONUS) 
+bonus_base:
+	@echo Making Libft
+	@echo B O N U S _ T E S T S _ O N L Y
+	@make bonus -C $(PATH_LIBFT)
+
+bonus: $(BONUS_TEST)
 
 all: base bonus
 
