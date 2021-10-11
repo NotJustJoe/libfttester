@@ -9,10 +9,10 @@ There will of course, be some tests based off some other tester i found around, 
 
 Test feedbacks :
 
-YELLOW = SEGFAULT__
-RED = OUTPUT KO__
-BLUE = LEAKS KO__
-GREEN = OUTPUT OK, NO LEAKS__
+YELLOW = SEGFAULT<br />
+RED = OUTPUT KO<br />
+BLUE = LEAKS KO<br />
+GREEN = OUTPUT OK, NO LEAKS<br />
 
 To use it :
 
