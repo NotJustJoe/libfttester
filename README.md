@@ -4,8 +4,12 @@ A Tester for the Libft 42 project
 This Tester was made by NotJustJoe, using Tripouille Leaks checker and kind of inspired off his work (https://github.com/Tripouille/libftTester) Thanks to him !
 Here are some usefull info to have before using it:
 
-I think that handling NULL parameter is a good point in starting the 42 Cursus, therefor EACH of my test (if possible) will try to pass NULL as parameter.
+I think that handling NULL parameter is a good point in starting the 42 Cursus, therefor there is a make null that will try to pass NULL as parameter for functions that allows it.
 There will of course, be some tests based off some other tester i found around, i just made my own to add what i though was missing off the one i've seen.
+
+The tests output will follow such as :
+1[KO] by ft_atoi("15468")
+letting you know what exact test was a fail.
 
 Test feedbacks :
 
@@ -13,6 +17,7 @@ YELLOW = SEGFAULT<br />
 RED = OUTPUT KO<br />
 BLUE = LEAKS KO<br />
 GREEN = OUTPUT OK, NO LEAKS<br />
+
 
 To use it :
 
