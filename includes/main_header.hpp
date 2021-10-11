@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:52:03 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 13:55:37 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 10:30:18 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@
 *   SIGNAL HANDLING
 */
 void    segfault_handler(int sig);
+void	free_tabs(char **tabs);
 
 #endif

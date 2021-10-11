@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/10 02:41:26 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 10:55:27 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class   Infos{
         void    putsSpacer ( void );
         void    showLeaks( int returned, int expected );
         void    showLeaksCharPtr( char * returned, char * expected );
+        void    showLeaksInt( int returned, int expected );
         void    tripouilleCheck(void * p, size_t required_size);
         int     gTN ( void );
     private:

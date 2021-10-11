@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 08:11:46 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 10:57:16 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,7 @@ void Infos::showLeaksCharPtr( char * returned, char * expected )
     mallocList.clear();
 }
 
-
-void Infos::showLeaks( int returned, int expected )
+void Infos::showLeaksInt( int returned, int expected )
 {
     if (mallocList.size() != 0)
     {
@@ -138,11 +137,34 @@ void Infos::showLeaks( int returned, int expected )
     mallocList.clear();
 }
 
+void Infos::showLeaks( int returned, int expected )
+{
+    if (mallocList.size() != 0)
+    {
+        std::ostringstream ss; ss << this->_actualTest << "[\033[1;91mKO LEAKS:"; write(1, ss.str().c_str(), ss.str().size());
+        std::vector<ptr>::iterator it = mallocList.begin(); std::vector<ptr>::iterator ite = mallocList.end();
+        for (; it != ite; ++it)
+            {std::ostringstream ss; ss << it->p << " | size : " << it->size << "\033[0m] by " << this->_input << "\t"; write(1, ss.str().c_str(), ss.str().size());}
+    }
+    else {
+        if (returned == 1 && expected == 1){
+            this->_goodAnswers++;
+            Infos::putsCorrect();
+        }
+        else if (((returned != 1 && expected != 1) || (returned != 1 || expected != 1)) && this->_isLeaking == false){
+            Infos::putsIncorrect();
+        }
+        if (this->_totalTests == this->_actualTest)
+            Infos::putsEndTest();
+    }
+    mallocList.clear();
+}
+
 void    Infos::tInt( int returned, int expected ){
     this->_actualTest++;
     this->_input = testing;
     this->_isLeaking = false;
-    Infos::showLeaks( returned, expected );
+    Infos::showLeaksInt( returned, expected );
 }
 
 void    Infos::tIntPtr( int returned, int expected ){
