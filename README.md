@@ -9,10 +9,10 @@ There will of course, be some tests based off some other tester i found around, 
 
 Test feedbacks :
 
-YELLOW = SEGFAULT
-RED = OUTPUT KO
-BLUE = LEAKS KO
-GREEN = OUTPUT OK, NO LEAKS
+YELLOW = SEGFAULT__
+RED = OUTPUT KO__
+BLUE = LEAKS KO__
+GREEN = OUTPUT OK, NO LEAKS__
 
 To use it :
 
@@ -35,6 +35,9 @@ $>make bonus
 
 4 - Run every tests, mandatory and bonus.
 $>make all
+
+5 - Run tests for Functions that accepts NULL parameters
+$>make null
 
 -----
 For any questions, contact me on 42 slack 'trofidal' or by discord, NotJustJoe#3756
