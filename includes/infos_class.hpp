@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 10:55:27 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:58:15 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ class   Infos{
         void    showLeaksCharPtr( char * returned, char * expected );
         void    showLeaksInt( int returned, int expected );
         void    tripouilleCheck(void * p, size_t required_size);
+        void    setTestName( std::string functionName );
+        void    putsTestNameSmall( void );
+        void    resetTestNumber( void );
         int     gTN ( void );
     private:
         std::string _function;

@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 14:58:54 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:58:33 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,23 @@ void    Infos::putsCorrect( void ){
     "[" << "\033[1;32mOK\033[0m" << "]\t";
     if (this->_actualTest % 5 == 0)
         std::cout << std::endl;
+}
+
+void    Infos::putsTestNameSmall( void ){
+    std::cout << 
+    std::endl << 
+    "\033[1;34mft_" << 
+    this->_function << 
+    "\033[0m:" << 
+    std::endl;
+}
+
+void    Infos::resetTestNumber( void ){
+    this->_actualTest = 0;
+}
+
+void    Infos::setTestName( std::string functionName ){
+    this->_function = functionName;
 }
 
 void    Infos::putsIncorrect( void ){

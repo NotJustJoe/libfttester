@@ -6,9 +6,11 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/11 14:51:31 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/11 15:12:47 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+.DEFAULT=base_start
 
 ##################### 			D E F I N E				#####################
 CC			= clang++
@@ -31,6 +33,8 @@ BONUS_TEST	=	lstnew lstadd_front lstsize \
 				lstlast lstadd_back lstdelone \
 				lstclear lstiter lstmap
 
+NULL_TEST = z_NULL.cpp
+
 $(BASIC_TEST): %: base_start
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
@@ -39,8 +43,12 @@ $(BONUS):
 
 base_start:
 	@echo Making Libft
+	@echo B A S E _ T E S T S _ W I T H O U T _ B O N U S E S
 	@make -C $(PATH_LIBFT)
 	
+null:
+	@make -C $(PATH_LIBFT)
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_test:
 	make -C $(PATH_LIBFT)
