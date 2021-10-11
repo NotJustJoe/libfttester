@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 15:58:33 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 16:05:55 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,9 @@ void    Infos::putsSigsegv( void ){
 void    Infos::putsTestName( void ){
     Infos::putsSpacer();
     std::cout << 
-    "ft_" << 
-    this->_function;
+    "\033[1;34mft_" << 
+    this->_function <<
+    "\033[0m";
     Infos::putsSpacer();
 }
 
@@ -91,18 +92,18 @@ void    Infos::putsEndTest( void ){
     if (this->_goodAnswers == this->_totalTests){
         Infos::putsSpacer();
         std::cout << 
-        "ft_" << 
+        "\033[1;34mft_" << 
         this->_function << 
-        " : " << 
+        " \033[0m: " << 
         "\033[1;32mS U C C E S S\033[0m";
         Infos::putsSpacer();
     }
     else{
         Infos::putsSpacer();
         std::cout << 
-        "ft_" << 
+        "\033[1;34mft_" << 
         this->_function << 
-        " : " << 
+        " \033[0m: " << 
         "\033[1;31mF A I L U R E\033[0m";
         Infos::putsSpacer();
     }
