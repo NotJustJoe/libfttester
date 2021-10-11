@@ -39,4 +39,4 @@ $>make all
 -----
 For any questions, contact me on 42 slack 'trofidal' or by discord, NotJustJoe#3756
 -----
-This Tester has been made after i was using https://github.com/tripouille/libftTester way too often and wanted to have my own, go take a look !
+This Tester has been made after using https://github.com/tripouille/libftTester way too much and wanted to have my own, go take a look !
