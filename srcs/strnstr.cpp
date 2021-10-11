@@ -34,16 +34,16 @@ int main(void){
     #define s std::to_string
     #define t setTesting
 	
-	/*1*/trofidal.t(fN, "(str, findme, 10)");trofidal.tCharPtr(a(str, findme, 10), b(str, findme, 10));
-	/*2*/trofidal.t(fN, "(str, findme, -50)");trofidal.tCharPtr(a(str, findme, -50), b(str, findme, -50));
-	/*3*/trofidal.t(fN, "(str, you, -10)");trofidal.tCharPtr(a(str, "findme", -10), b(str, "findme", -10));
-	/*4*/trofidal.t(fN, "(str, l, -1)");trofidal.tCharPtr(a(str, "l", -1), b(str, "l", -1));
-	/*5*/trofidal.t(fN, "(str, findme, -1)");trofidal.tCharPtr(a(str, "", -1), b(str, "", -1));
-	/*6*/trofidal.t(fN, "(str, little string is enough, -1)");trofidal.tCharPtr(a(str, "little string is enough", -1), b(str, "little string is enough", -1));
-	/*7*/trofidal.t(fN, "(str, little string is enough, 0)");trofidal.tCharPtr(a(str, "little string is enough", 0), b(str, "little string is enough", 0));
-	/*8*/trofidal.t(fN, "(str, ough, 22)");trofidal.tCharPtr(a(str, "ough", 22), b(str, "ough", 22));
-	/*9*/trofidal.t(fN, "(str, findme, 10)");trofidal.tCharPtr(a(str, findme, 10), b(str, findme, 10));
-	/*10*/trofidal.t(fN, "(str, little string is enough, 0)");trofidal.tCharPtr(a(findme, "little string is enough", 0), b(findme, "little string is enough", 0));
-	/*11*/trofidal.t(fN, "(str, ough, 22)");trofidal.tCharPtr(a(str, "ough", 22), b(str, "ough", 22));
-	/*12*/trofidal.t(fN, "(NULL, findme, 10)");trofidal.tCharPtr(a(NULL, findme, 10), b("", findme, 10));
+	/*1*/trofidal.t(fN, "str, findme, 10");trofidal.tCharPtr(a(str, findme, 10), b(str, findme, 10));
+	/*2*/trofidal.t(fN, "str, findme, -50");trofidal.tCharPtr(a(str, findme, -50), b(str, findme, -50));
+	/*3*/trofidal.t(fN, "str, you, -10");trofidal.tCharPtr(a(str, "findme", -10), b(str, "findme", -10));
+	/*4*/trofidal.t(fN, "str, l, -1");trofidal.tCharPtr(a(str, "l", -1), b(str, "l", -1));
+	/*5*/trofidal.t(fN, "str, findme, -1");trofidal.tCharPtr(a(str, "", -1), b(str, "", -1));
+	/*6*/trofidal.t(fN, "str, little string is enough, -1");trofidal.tCharPtr(a(str, "little string is enough", -1), b(str, "little string is enough", -1));
+	/*7*/trofidal.t(fN, "str, little string is enough, 0");trofidal.tCharPtr(a(str, "little string is enough", 0), b(str, "little string is enough", 0));
+	/*8*/trofidal.t(fN, "str, ough, 22");trofidal.tCharPtr(a(str, "ough", 22), b(str, "ough", 22));
+	/*9*/trofidal.t(fN, "str, findme, 10");trofidal.tCharPtr(a(str, findme, 10), b(str, findme, 10));
+	/*10*/trofidal.t(fN, "str, little string is enough, 0");trofidal.tCharPtr(a(findme, "little string is enough", 0), b(findme, "little string is enough", 0));
+	/*11*/trofidal.t(fN, "str, ough, 22");trofidal.tCharPtr(a(str, "ough", 22), b(str, "ough", 22));
+	/*12*/trofidal.t(fN, "NULL, findme, 10");trofidal.tCharPtr(a(NULL, findme, 10), b("", findme, 10));
 }

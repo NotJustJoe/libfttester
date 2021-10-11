@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/10 02:55:04 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 08:11:46 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void    Infos::putsCorrect( void ){
     std::cout << 
     this->_actualTest << 
     "[" << "\033[1;32mOK\033[0m" << "]\t";
-    if (this->_actualTest % 3 == 0)
+    if (this->_actualTest % 5 == 0)
         std::cout << std::endl;
 }
 
@@ -50,7 +50,7 @@ void    Infos::putsIncorrect( void ){
     this->_actualTest << 
     "[" << "\033[1;31mKO\033[0m" << "] by :";
     std::cout << this->_input << "\t";
-    if (this->_actualTest % 3 == 0)
+    if (this->_actualTest % 5 == 0)
         std::cout << std::endl;
 }
 
@@ -58,7 +58,7 @@ void    Infos::putsSigsegv( void ){
     std::cout << 
     this->_actualTest << 
     "[" << "\033[1;93mSEGFAULT\033[0m" << "]\t";
-    if (this->_actualTest % 3 == 0)
+    if (this->_actualTest % 5 == 0)
         std::cout << std::endl;
 }
 

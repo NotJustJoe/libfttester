@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/10 10:29:07 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/11 08:07:04 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BASIC_TEST	=	isalpha isdigit isalnum isascii isprint \
 				strlen memset bzero memcpy memmove strlcpy \
 				strlcat toupper tolower strchr strrchr strncmp \
 				memchr memcmp strnstr atoi calloc strdup \
-				substr #strjoin strtrim split itoa strmapi \
+				substr strjoin #strtrim split itoa strmapi \
 				striteri putchar_fd putstr_fd putendl_fd \
 				putnbr_fd
 ##################### 		B O N U S	T E S T S		#####################
