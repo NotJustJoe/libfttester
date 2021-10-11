@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 08:07:33 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 11:03:48 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:02:13 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int         test_number;
 
 int main(void){
     std::string fN = "strjoin"; //Function Name
-    Infos   trofidal(fN, 9);
+    Infos   trofidal(fN, 6);
     signal(SIGSEGV, segfault_handler);
     
     #define a ft_strjoin

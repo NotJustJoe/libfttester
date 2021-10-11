@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:40:15 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/09 12:58:15 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:01:56 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int         test_number;
 
 int main(void){
     std::string fN = "strrchr"; //Function Name
-    Infos   trofidal(fN, 15);
+    Infos   trofidal(fN, 12);
     signal(SIGSEGV, segfault_handler);
 	const char *retFake;
 	const char *retReal;

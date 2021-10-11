@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:19:46 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 10:57:16 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 14:58:54 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Infos::Infos( std::string function, int totalTests ){
 }
 
 Infos::~Infos( void ){
-    if (this->_totalTests == this->_goodAnswers)
+    if (this->_totalTests == this->_actualTest)
         std::cout << 
         "Results for " << 
         this->_function << 

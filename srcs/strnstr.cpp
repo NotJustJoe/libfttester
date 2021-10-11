@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 10:27:01 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 10:15:21 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:01:44 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int         test_number;
 
 int main(void){
     std::string fN = "strnstr"; //Function Name
-    Infos   trofidal(fN, 15);
+    Infos   trofidal(fN, 12);
 	char	str[] = {"little string is enough"};
 	char	findme[] = {"string"};
 	char	reallyvoidy[] = {""};
