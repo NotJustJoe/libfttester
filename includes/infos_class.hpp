@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:39:30 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 18:09:22 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/16 09:50:21 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class   Infos{
         void    tIntLst( int returned, int expected );
         void    showLeaksLst( int returned, int expected );
         int     gTN ( void );
+        void    checkLeaksNoCheck( void );
     private:
         std::string _function;
         std::string _input;
