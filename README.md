@@ -21,18 +21,17 @@ GREEN = OUTPUT OK, NO LEAKS<br />
 
 To use it :
 
-$>cd libft
-$>git clone https://github.com/NotJustJoe/libfttester
-$>cd libfttester
+$>cd libft<br />
+$>git clone https://github.com/NotJustJoe/libfttester<br />
+$>cd libfttester<br />
 
-INSIDE THE FOLDER ARE THE AVAILABLE MAKE COMMANDS:
+Inside the folder, these are the available make commands:
 
 1 - Run a test for a specific function<br />
 $>make atoi
 
 2 - Run basics tests, only the mandatory part<br />
 $>make base
-
 
 3 - Run bonus only.<br />
 $>make bonus
