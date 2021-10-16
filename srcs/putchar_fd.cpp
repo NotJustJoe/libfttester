@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:56:20 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 14:33:38 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/16 01:42:06 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int         test_number;
 int create_test_file( char *file_name, char c ){
     int __FILE_DESCRIPTOR__ = 0, found = 0;
     char    occur[20], find[20];
-    char    str[2];
+    char    str[1];
     str[0] = c;
+    memset(occur, 0, 20);
+    memset(find, 0, 20);
     #define a ft_putchar_fd
     
     __FILE_DESCRIPTOR__ = open(file_name, O_RDWR | O_CREAT);
@@ -35,7 +37,7 @@ int create_test_file( char *file_name, char c ){
     strcpy(occur, str);
     std::ifstream test_nd(file_name);
     test_nd >> find;
-     if (strcmp(find, occur) == 0)
+    if (strcmp(find, occur) == 0)
         found++;
     remove(file_name);
     return (found);

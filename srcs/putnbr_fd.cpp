@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:51:39 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 15:00:34 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/16 01:41:36 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int         test_number;
 int create_test_file( char *file_name, int nbr ){
     int __FILE_DESCRIPTOR__ = 0, found = 0;
     char    occur[20];
+    memset(occur, 0, 20);
 	std::string	find;
     std::string itoto;
 
