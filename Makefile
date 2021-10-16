@@ -6,11 +6,11 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/16 01:23:25 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/16 02:32:03 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.DEFAULT=base_start
+.DEFAULT=base
 
 ##################### 			D E F I N E				#####################
 CC					= clang++
@@ -43,6 +43,7 @@ $(BONUS_TEST): %: bonus_base
 
 base_start:
 	@echo Making Libft
+	@rm -f libft.a
 	@echo B A S E _ T E S T S _ W I T H O U T _ B O N U S E S
 	@make -C $(PATH_LIBFT)
 	
@@ -64,9 +65,23 @@ bonus: $(BONUS_TEST)
 
 all: base bonus
 
+help:
+	@printf "Available commands are :\n"
+	@printf "make base\n"
+	@printf "Make every mandatory tests\n"
+	@printf "make function\n"
+	@printf "Make the targeted function (make atoi) will make only atoi tests\n"
+	@printf "make bonus\n"
+	@printf "Will only make bonus tests\n"
+	@printf "make all\n"
+	@printf "Will make every tests, mandatory and bonus\n"
+	@printf "make null\n"
+	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
+	
 clean:
 	make clean -C $(PATH_LIBFT) && rm -f a.out libft.a
 fclean:
 	make fclean -C $(PATH_LIBFT) && rm -f a.out libft.a
 
 .PHONY: base_start base_test base bonus all clean fclean
+
