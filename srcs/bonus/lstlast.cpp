@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:49:26 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 18:53:11 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/17 14:24:03 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	free_list(t_list *lst){
 
 int main(void){
     std::string fN = "lstlast"; //Function Name
-    Infos   trofidal(fN, 3);
+    Infos   trofidal(fN, 1);
     signal(SIGSEGV, segfault_handler);
     
     #define s std::to_string
@@ -38,9 +38,14 @@ int main(void){
 	t_list *lst = NULL;
     int retA = 0, retB = 0;
 
-    ft_lstadd_back(&lst, ft_lstnew((void *)42));
-    ft_lstadd_back(&lst, ft_lstnew((void *)24));
-    ft_lstadd_back(&lst, ft_lstnew((void *)69420));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
+    ft_lstadd_back(&lst, ft_lstnew(malloc(4)));
 	retA = (ft_lstlast(lst)->content == (void *)69420) ? 1 : 0; retB = 1;
 	/*1*/trofidal.t(fN, "lstlast (size of lst is 3)");trofidal.tIntPtr(retA, retB);
     trofidal.tripouilleCheck(lst, sizeof(t_list));free_list(lst);trofidal.showLeaks(retA, retB);
