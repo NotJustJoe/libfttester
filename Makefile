@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 10:19:56 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 10:35:06 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ NULL_TEST =		z_NULL.cpp
 
 NULL_TEST_OLD = z_OLD_NULL.cpp
 
+
+
 $(BASIC_TEST): %: base_start
 	@printf $(blue)
 	@printf "Compiling $* file\e[K\r"
@@ -62,17 +64,19 @@ base_start:
 	@printf $(reset_char)
 	
 null:
-	@make -C $(PATH_LIBFT)
+	@make  -s --no-print-directory -C $(PATH_LIBFT)
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 null_old:
-	@make -C $(PATH_LIBFT)
+	@make -s --no-print-directory -C $(PATH_LIBFT)
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST_OLD) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_test:
-	make -C $(PATH_LIBFT)
+	make -s --no-print-directory -C $(PATH_LIBFT)
 
 base: $(BASIC_TEST)
+
+base_old: $(OLD_TEST)
 
 bonus_base:
 	@echo Making Libft
@@ -119,12 +123,35 @@ help:
 	@printf $(blue)
 	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
 	@printf $(reset_char)
+	@printf $(red)
+	@printf "make base_old\n"
+	@printf $(reset_char)
+	@printf $(blue)
+	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
+	@printf $(reset_char)
+	@printf $(red)
+	@printf "make null_old\n"
+	@printf $(reset_char)
+	@printf $(blue)
+	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
+	@printf $(reset_char)
+	@printf $(red)
+	@printf "make help\n"
+	@printf $(reset_char)	
+	@printf $(blue)
+	@printf "Will display this function\n"
+	@printf $(reset_char)
 	
 clean:
-	make clean -C $(PATH_LIBFT) && rm -f a.out libft.a
+	@printf $(blue)	
+	@make clean -s --no-print-directory -C $(PATH_LIBFT) && rm -f a.out libft.a
+	@printf "Cleared libft object files\n"
+	@printf $(reset_char)
 fclean:
-	make fclean -C $(PATH_LIBFT) && rm -f a.out libft.a
-
+	@make fclean -s --no-print-directory -C $(PATH_LIBFT) && rm -f a.out libft.a
+	@printf $(blue)	
+	@printf "Fully cleared libft\n"
+	@printf $(reset_char)
 .PHONY: base_start base_test base bonus all clean fclean
 
 ####	C	O	L	O	R	S	####
