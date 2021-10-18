@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 09:36:01 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 10:19:56 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,9 @@ BONUS_TEST	=	lstnew lstadd_front lstsize \
 				lstlast lstadd_back lstdelone \
 				lstclear lstiter lstmap
 
-NULL_TEST = z_NULL.cpp
+NULL_TEST =		z_NULL.cpp
+
+NULL_TEST_OLD = z_OLD_NULL.cpp
 
 $(BASIC_TEST): %: base_start
 	@printf $(blue)
@@ -61,7 +63,11 @@ base_start:
 	
 null:
 	@make -C $(PATH_LIBFT)
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH) $(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+
+null_old:
+	@make -C $(PATH_LIBFT)
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST_OLD) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_test:
 	make -C $(PATH_LIBFT)
