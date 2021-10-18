@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 18:10:07 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 18:13:25 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ $(BASIC_TEST): %: base_start
 	@printf "$(reset_char)"
 
 $(BONUS_TEST): %: bonus_base
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH_BONUS)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	-@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH_BONUS)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_start:
 	@printf $(blue)
@@ -65,11 +65,11 @@ base_start:
 	
 null:
 	@make  -s --no-print-directory -C $(PATH_LIBFT)
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	-@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 null_old:
 	@make -s --no-print-directory -C $(PATH_LIBFT)
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST_OLD) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	-@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST_OLD) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_test:
 	make -s --no-print-directory -C $(PATH_LIBFT)
