@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 08:58:04 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 09:36:01 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,10 @@ BONUS_TEST	=	lstnew lstadd_front lstsize \
 NULL_TEST = z_NULL.cpp
 
 $(BASIC_TEST): %: base_start
+	@printf $(blue)
+	@printf "Compiling $* file\e[K\r"
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	@printf "$(reset_char)"
 
 $(BONUS_TEST): %: bonus_base
 	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH_BONUS)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
@@ -53,12 +56,12 @@ base_start:
 	@printf "Making Libft\n"
 	@rm -f libft.a
 	@printf "B A S E _ T E S T S _ W I T H O U T _ B O N U S E S\n"
-	@make -C $(PATH_LIBFT)
+	@make -s --no-print-directory -C $(PATH_LIBFT)
 	@printf $(reset_char)
 	
 null:
 	@make -C $(PATH_LIBFT)
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH) $(NULL_TEST) -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_test:
 	make -C $(PATH_LIBFT)
@@ -70,7 +73,7 @@ bonus_base:
 	@printf $(blue)
 	@printf "B O N U S _ T E S T S _ O N L Y\n"
 	@printf $(reset_char)
-	@make bonus -C $(PATH_LIBFT)
+	@make bonus -s --no-print-directory -C $(PATH_LIBFT)
 
 bonus: $(BONUS_TEST)
 
