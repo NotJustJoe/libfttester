@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 13:35:51 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/17 14:16:40 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/18 08:26:02 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,18 @@ void	free_list(t_list *lst){
 }
 
 int main(void){
-    std::string fN = "lstdelone"; //Function Name
+    std::string fN = "lstclear"; //Function Name
     Infos   trofidal(fN, 1);
     signal(SIGSEGV, segfault_handler);
     
     #define s std::to_string
     #define t setTesting
     
-	t_list *lst = NULL;
+	t_list *lst = ft_lstnew(malloc(1));
     int retA = 0, retB = 0;
-
-    lst = ft_lstnew(malloc(1));
-    ft_lstdelone(lst, free);
-    retB = ft_lstsize(lst);
-    lst = 0;
+	for (int i = 0; i < 5; ++i)
+		ft_lstadd_front(&lst, ft_lstnew(malloc(1)));
+    ft_lstclear(&lst, free);
     /*3*/trofidal.t(fN, "lst, free");trofidal.tIntPtr(ft_lstsize(lst), retB - 1);
-    trofidal.showLeaks(ft_lstsize(lst) == 0 ? 1 : 0, retB - 1 == 0 ? 1 : 0);
+    trofidal.showLeaks(ft_lstsize(lst) == 0 ? 1 : 0, 1);
 }

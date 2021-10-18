@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:35:50 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 18:38:10 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/18 08:47:39 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	free_list(t_list *lst){
 
 int main(void){
     std::string fN = "lstadd_back"; //Function Name
-    Infos   trofidal(fN, 3);
+    Infos   trofidal(fN, 6);
     signal(SIGSEGV, segfault_handler);
     
     #define s std::to_string

@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 08:15:05 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 08:58:04 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ OLD_TEST	=	isalpha isdigit isalnum isascii isprint \
 ##################### 		B O N U S	T E S T S		#####################
 BONUS_TEST	=	lstnew lstadd_front lstsize \
 				lstlast lstadd_back lstdelone \
-				lstclear #lstiter lstmap
+				lstclear lstiter lstmap
 
 NULL_TEST = z_NULL.cpp
 
