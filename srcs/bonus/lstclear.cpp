@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 13:35:51 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/18 08:26:02 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:07:49 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int main(void){
 	for (int i = 0; i < 5; ++i)
 		ft_lstadd_front(&lst, ft_lstnew(malloc(1)));
     ft_lstclear(&lst, free);
-    /*3*/trofidal.t(fN, "lst, free");trofidal.tIntPtr(ft_lstsize(lst), retB - 1);
+    /*1*/trofidal.t(fN, "lst, free");trofidal.tIntPtr(ft_lstsize(lst), retB - 1);
     trofidal.showLeaks(ft_lstsize(lst) == 0 ? 1 : 0, 1);
 }

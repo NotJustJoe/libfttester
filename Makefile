@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 10:35:06 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/18 18:10:07 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ NULL_TEST_OLD = z_OLD_NULL.cpp
 $(BASIC_TEST): %: base_start
 	@printf $(blue)
 	@printf "Compiling $* file\e[K\r"
-	@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
+	-@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 	@printf "$(reset_char)"
 
 $(BONUS_TEST): %: bonus_base

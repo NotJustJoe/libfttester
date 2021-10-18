@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 13:35:51 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/17 14:16:16 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:07:46 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int main(void){
     ft_lstdelone(lst, free);
     retB = ft_lstsize(lst);
     lst = 0;
-    /*3*/trofidal.t(fN, "lst, free");trofidal.tIntPtr(ft_lstsize(lst), retB - 1);
+    /*1*/trofidal.t(fN, "lst, free");trofidal.tIntPtr(ft_lstsize(lst), retB - 1);
     trofidal.showLeaks(ft_lstsize(lst) == 0 ? 1 : 0, retB - 1 == 0 ? 1 : 0);
 }

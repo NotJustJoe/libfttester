@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 08:27:14 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/18 08:54:18 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:06:53 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main(void){
 	for (int i = 1; i < 6; ++i)
 		ft_lstadd_back(&lst, ft_lstnew(tab + i));
     ft_lstiter(lst, addOne);
-	std::cout << "void addOne(void * p) {++*(int*)p;}" << std::endl;
+	std::cout << "Function passed to iter : void addOne(void * p) {++*(int*)p;}" << std::endl;
     /*1*/trofidal.t(fN, "lst, addOne | checking if *(int *)tmp->content == 1");trofidal.tIntLst(*(int *)tmp->content == 1 ? 1 : 0, 1);
 	trofidal.tripouilleCheck(lst, sizeof(t_list));
     tmp = tmp->next;
