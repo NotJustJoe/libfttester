@@ -37,7 +37,7 @@ $>make base
 $>make bonus
 
 4 - Run every tests, mandatory and bonus.<br />
-$>make all (not done yet)
+$>make all
 
 5 - Run tests for Functions that accepts NULL parameters<br />
 $>make null
