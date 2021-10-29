@@ -19,7 +19,7 @@ BLUE = LEAKS KO<br />
 GREEN = OUTPUT OK, NO LEAKS<br />
 
 
-#Usage :
+#titre Usage :
 
 $>cd libft<br />
 $>git clone https://github.com/NotJustJoe/libfttester<br />
