@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/18 18:13:25 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/29 03:17:03 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ $(BONUS_TEST): %: bonus_base
 	-@$(CC) $(CFLAGS) $(FOR_ALL) $(TESTER_PATH_BONUS)$*.cpp -L$(PATH_LIBFT) -lft && ./a.out && rm -rf a.out*
 
 base_start:
+	@git pull
 	@printf $(blue)
 	@printf "Making Libft\n"
 	@rm -f libft.a
