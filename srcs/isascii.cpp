@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 10:50:31 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/08 14:33:02 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/29 09:57:48 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ int main(void){
     /*14*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
     /*15*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
     /*16*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
-    /*17*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()])); 
+    /*17*/trofidal.t(fN, s(v[trofidal.gTN()]));trofidal.tInt(a(v[trofidal.gTN()]), b(v[trofidal.gTN()]));
 }

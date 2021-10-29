@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 11:48:25 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 12:03:28 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/29 09:56:27 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main(void){
     /*1*/trofidal.t(fN, "2147483647");trofidal.tIntPtr(1, 1);
     trofidal.tripouilleCheck(fakeItoa, 12);strcpy(tempReal, realItoa);strcpy(tempFake, fakeItoa);free(fakeItoa); free(realItoa);trofidal.showLeaks(strcmp(tempFake, tempReal) == 0 ? 1 : 0, strlen(tempFake) == strlen(tempReal));
     fakeItoa = a(-2147483648);realItoa = b("-2147483648");
-    /*2*/trofidal.t(fN, "-2147483648");trofidal.tIntPtr(1, 1);
+    /*2*/trofidal.t(fN, "-2147483648   if this test is ko, maybe a LONG value can help :)");trofidal.tIntPtr(1, 1);
     trofidal.tripouilleCheck(fakeItoa, 13);strcpy(tempReal, realItoa);strcpy(tempFake, fakeItoa);free(fakeItoa); free(realItoa);trofidal.showLeaks(strcmp(tempFake, tempReal) == 0 ? 1 : 0, strlen(tempFake) == strlen(tempReal));
     fakeItoa = a(0);realItoa = b("0");
     /*3*/trofidal.t(fN, "0");trofidal.tIntPtr(1, 1);

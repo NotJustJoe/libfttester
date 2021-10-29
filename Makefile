@@ -6,7 +6,7 @@
 #    By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 16:47:43 by trofidal          #+#    #+#              #
-#    Updated: 2021/10/29 03:17:03 by trofidal         ###   ########.fr        #
+#    Updated: 2021/10/29 10:13:00 by trofidal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ base_start:
 	@printf $(blue)
 	@printf "Making Libft\n"
 	@rm -f libft.a
-	@printf "B A S E _ T E S T S _ W I T H O U T _ B O N U S E S\n"
+	@printf "MANDATORY TESTS, Do not forget that there is a make help command !\n"
 	@make -s --no-print-directory -C $(PATH_LIBFT)
 	@printf $(reset_char)
 	
@@ -128,19 +128,26 @@ help:
 	@printf "make base_old\n"
 	@printf $(reset_char)
 	@printf $(blue)
-	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
+	@printf "Will make only base tests for the old libfts.\n"
 	@printf $(reset_char)
 	@printf $(red)
 	@printf "make null_old\n"
 	@printf $(reset_char)
 	@printf $(blue)
-	@printf "Will make only null parameters tests, usefull to protect your libft functions.\n"
+	@printf "Will make only null parameters tests, for the old libfts.\n"
 	@printf $(reset_char)
 	@printf $(red)
 	@printf "make help\n"
 	@printf $(reset_char)	
 	@printf $(blue)
 	@printf "Will display this function\n"
+	@printf $(reset_char)
+	@printf $(red)
+	@printf "Tips for the user:"
+	@printf $(reset_char)
+	@printf $(blue)
+	@printf "If you have a KO on a test that occur from time to time, try to chaning your malloc to calloc, if it fixes, you are allocating the wrong space.\n"
+	@printf "If you have a SEGFAULT on a test out of the make NULL, it's not because I have put NULL as parameter.\n"
 	@printf $(reset_char)
 	
 clean:

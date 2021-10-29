@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:34:07 by trofidal          #+#    #+#             */
-/*   Updated: 2021/10/11 15:05:07 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/10/29 09:58:27 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ int main(void){
     /*15*/trofidal.t(fN, "(000)");trofidal.tInt(a("000"), b("000")); 
     /*16*/trofidal.t(fN, "(59595959595)");trofidal.tInt(a("59595959595"), b("59595959595")); 
     /*17*/trofidal.t(fN, "()");trofidal.tInt(a(""), b("")); 
-    /*18*/trofidal.t(fN, "(NULL CHARACTER)");trofidal.tInt(a("\0"), b("\0")); 
+    /*18*/trofidal.t(fN, "(\\0)");trofidal.tInt(a("\0"), b("\0")); 
 }
