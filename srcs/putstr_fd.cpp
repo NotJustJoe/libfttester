@@ -55,7 +55,7 @@ int main(void){
     int    found = 0;
     
     found = create_test_file((char *)"test_file", (char *)"hi i am test one");
-    /*1*/trofidal.t(fN, "yo soy test deux, fd");trofidal.tInt(found, 1); 
+    /*1*/trofidal.t(fN, "hi i am test one, fd");trofidal.tInt(found, 1); 
     found = create_test_file((char *)"test_file", (char *)"yo soy test deux");
     /*2*/trofidal.t(fN, "yo soy test deux, fd");trofidal.tInt(found, 1);
     found = create_test_file((char *)"test_file", (char *)"t");
